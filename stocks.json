@@ -1,0 +1,26 @@
+[
+  {
+    "symbol": "ALPEXSOLAR",
+    "market_api_type": "sme"
+  },
+  {
+    "symbol": "HEROMOTOCO",
+    "market_api_type": "equities"
+  },
+  {
+    "symbol": "LASERPOWER",
+    "market_api_type": "equities"
+  },
+  {
+    "symbol": "NETWEB",
+    "market_api_type": "equities"
+  },
+  {
+    "symbol": "VISHNU",
+    "market_api_type": "equities"
+  },
+  {
+    "symbol": "WAAREEENER",
+    "market_api_type": "equities"
+  }
+]

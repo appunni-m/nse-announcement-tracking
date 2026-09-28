@@ -1,0 +1,29 @@
+[package]
+name = "nse-tracker"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.95"
+description = "Track NSE corporate announcements, analyze PDFs with Codex CLI, and send alerts"
+license = "MIT"
+
+[workspace]
+members = ["crates/widget"]
+resolver = "3"
+
+[dependencies]
+anyhow = "1.0"
+chrono = "0.4"
+clap = { version = "4.6", features = ["derive"] }
+pdf-extract = "0.12"
+reqwest = { version = "0.13", default-features = false, features = ["blocking", "cookies", "json", "rustls-no-provider"] }
+rustls = { version = "0.23", default-features = false, features = ["ring"] }
+rusqlite = { version = "0.39", features = ["bundled"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.53", features = ["rt-multi-thread", "signal", "time", "net", "macros"] }
+whatsapp-rust = { version = "=0.7.0", default-features = false, features = ["sqlite-storage", "tokio-transport", "tokio-runtime", "tokio-native", "ureq-client"] }
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = true
